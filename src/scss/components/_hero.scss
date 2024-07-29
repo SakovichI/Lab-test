@@ -1,0 +1,93 @@
+.hero {
+  background: url("../img/hero-fon.jpg") no-repeat center;
+  background-size: cover;
+  &__wrap {
+    margin: 0 auto;
+    max-width: 748px;
+    padding: 313px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    color: var(--white);
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 92px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 178%;
+    text-align: center;
+    color: var(--white);
+  }
+
+  &__link {
+    padding: 20px 40px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--black);
+    background: var(--light-gray);
+    transition: 0.2s ease-in;
+    &:hover {
+      background: var(--white);
+      transition: 0.2s ease-in;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .hero {
+    background: url("../img/hero-fon.jpg") no-repeat center;
+    background-size: cover;
+    &__wrap {
+      margin: 0 auto;
+      max-width: 476px;
+      padding: 397px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      margin-bottom: 17px;
+      color: var(--white);
+      text-align: center;
+    }
+
+    &__subtitle {
+      margin-bottom: 40px;
+    }
+  }
+}
+@media all and (max-width: 420px) {
+  .hero {
+    background: url("../img/hero-fon.jpg") no-repeat center;
+    background-size: cover;
+    &__wrap {
+      margin: 0 auto;
+      max-width: 476px;
+      padding: 172px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      color: var(--white);
+      text-align: center;
+    }
+
+    &__subtitle {
+      margin-bottom: 26px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+/* stylelint-disable */
+
+@mixin burger {
+  --burger-width: 22px;
+  --burger-height: 12px;
+  --burger-line-height: 2px;
+
+  position: relative;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: var(--white);
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s ease-in;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: calc(100% - var(--burger-line-height));
+  }
+
+  &--active {
+    opacity: 0;
+    transition: 0.2s ease-in;
+  }
+}

@@ -1,0 +1,165 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  &__nav {
+    padding: 28px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.header-nav {
+  &__burger {
+    display: none;
+  }
+
+  &__burger-menu {
+    display: none;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--white);
+    transition: 0.5s ease-in;
+    &.menu--active {
+      transition: 0.5s ease-in;
+      left: 0;
+    }
+  }
+  &__logo {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__logo-icon {
+  }
+
+  &__logo-text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--white);
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__item {
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s ease-in;
+    &:hover {
+      border-bottom: 1px solid var(--white);
+      transition: 0.2s ease-in;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--white);
+  }
+}
+
+.burger {
+  @include burger;
+}
+
+.burger-menu {
+  &__wrap {
+    padding: 16px;
+  }
+
+  &__header {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__header-close {
+  }
+
+  &__header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--light-gray);
+    &:hover .burger-menu__link-text {
+      transition: 0.2s ease-in;
+      color: var(--black);
+    }
+    &:hover .burger-menu__link-icon {
+      transition: 0.2s ease-in;
+      fill: var(--black);
+    }
+  }
+
+  &__link {
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.2s ease-in;
+  }
+
+  &__link-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 178%;
+    color: var(--gray);
+  }
+
+  &__link-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--gray);
+    transition: 0.2s ease-in;
+  }
+}
+.burger-logo {
+  &__icon {
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--black);
+  }
+}
+
+@media all and (max-width: 768px) {
+  .header-nav {
+    &__burger {
+      display: block;
+    }
+
+    &__burger-menu {
+      display: block;
+    }
+
+    &__list {
+      display: none;
+    }
+  }
+}
